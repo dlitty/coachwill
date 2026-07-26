@@ -126,9 +126,22 @@
     height:auto;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
+    display:block;
   }
 
   .about-grid p{margin:0 0 14px;}
+
+  .about-photo{
+    margin:0;
+  }
+
+  .about-photo figcaption{
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    font-style:italic;
+    margin-top:10px;
+  }
 
   /* ---------- Pricing ---------- */
   .pricing-grid{
@@ -253,7 +266,10 @@
         <p>My first soccer experience was at age 4 in Intro to Soccer, but I&rsquo;ve been playing seriously since I was 11&nbsp;&mdash; playing for my Middle School team, competing with local club teams, as well as Holly Springs Parks and Rec league (twice with the All Stars).</p>
         <p>My coaching experience began at age 16 with the Town of Holly Springs and has continued for four years now. Last year, I joined Wake Futbol Club (Wake FC) as a head coach and am heading into my second year in their U12 and younger program. Additionally, I coach the Little Kickers program for XL Soccer World, a fun opportunity to share my love of the game with the youngest of players.</p>
       </div>
-      <img src="images/image2.png" alt="Coach Will on the field with a young player">
+      <figure class="about-photo">
+        <img src="images/image2.png" alt="Coach Will on the field with a young player">
+        <figcaption>Coach Will playing at age 4</figcaption>
+      </figure>
     </div>
   </section>
 
