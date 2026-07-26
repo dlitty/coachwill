@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coach Will's Soccer Experience | Apex &amp; Holly Springs, NC</title>
+<meta name="description" content="Coach Will Grush's playing and coaching background — recreational, club, and travel soccer in the Triangle.">
+<style>
+  :root{
+    --green-dark:#1b5e3a;
+    --green:#2e8b4f;
+    --green-light:#e9f5ee;
+    --ink:#1f2a24;
+    --muted:#5b6b62;
+    --gold:#f2b705;
+    --white:#ffffff;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(27,94,58,0.12);
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+  }
+
+  a{color:var(--green-dark);}
+
+  /* ---------- Back link bar ---------- */
+  .back-bar{
+    background:var(--green-dark);
+    padding:10px 24px;
+  }
+
+  .back-bar a{
+    color:var(--white);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    opacity:0.9;
+  }
+
+  .back-bar a:hover{opacity:1; text-decoration:underline;}
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    background:
+      linear-gradient(135deg, rgba(15,61,36,0.88), rgba(27,94,58,0.82)),
+      url('images/image4.jpg') center 30%/cover no-repeat;
+    color:var(--white);
+    padding:56px 24px 64px;
+    text-align:center;
+  }
+
+  header.hero .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+
+  header.hero h1{
+    margin:0 0 10px;
+    font-size:clamp(28px, 5vw, 46px);
+    font-weight:800;
+    letter-spacing:-0.5px;
+  }
+
+  header.hero p.tagline{
+    margin:0 auto 0;
+    max-width:640px;
+    font-size:clamp(15px, 2vw, 19px);
+    color:#eaf5ee;
+  }
+
+  /* ---------- Layout ---------- */
+  main{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  section{
+    padding:56px 0;
+    border-bottom:1px solid #eef2ef;
+  }
+
+  section:last-of-type{border-bottom:none;}
+
+  h2{
+    font-size:28px;
+    font-weight:800;
+    color:var(--green-dark);
+    margin:0 0 20px;
+  }
+
+  h3.role{
+    font-size:18px;
+    font-weight:700;
+    color:var(--green-dark);
+    margin:0 0 10px;
+  }
+
+  /* ---------- Photo strip ---------- */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+    margin-bottom:28px;
+  }
+
+  .gallery img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:var(--shadow);
+  }
+
+  /* ---------- Checklist ---------- */
+  .check-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:12px;
+  }
+
+  .check-list li{
+    background:var(--green-light);
+    border:1px solid #dcefe2;
+    border-radius:var(--radius);
+    padding:16px 18px;
+    padding-left:44px;
+    position:relative;
+    font-size:16px;
+  }
+
+  .check-list li::before{
+    content:"\2713";
+    position:absolute;
+    left:16px;
+    top:16px;
+    color:var(--white);
+    background:var(--green);
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    font-size:12px;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
+  }
+
+  /* ---------- Highlight banner ---------- */
+  .highlight{
+    margin-top:22px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:linear-gradient(135deg, var(--gold), #f7cf4d);
+    color:#4a3400;
+    border-radius:var(--radius);
+    padding:18px 22px;
+  }
+
+  .highlight img{
+    width:88px;
+    height:88px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid var(--white);
+    box-shadow:var(--shadow);
+    flex-shrink:0;
+  }
+
+  .highlight p{
+    margin:0;
+    font-weight:700;
+    font-size:16px;
+  }
+
+  /* ---------- Coaching roles ---------- */
+  .roles{
+    display:grid;
+    gap:18px;
+  }
+
+  .role-card{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:20px;
+    align-items:center;
+    background:var(--white);
+    border:1px solid #e3ece6;
+    border-radius:var(--radius);
+    padding:20px;
+    box-shadow:var(--shadow);
+  }
+
+  .role-card img{
+    width:110px;
+    height:110px;
+    object-fit:cover;
+    border-radius:10px;
+  }
+
+  .role-card .photo-pair{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    width:110px;
+  }
+
+  .role-card .photo-pair img{
+    width:110px;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+  }
+
+  .role-card ul{
+    margin:8px 0 0;
+    padding-left:20px;
+    color:var(--muted);
+  }
+
+  .role-card ul li{margin-bottom:4px;}
+
+  .role-card p.meta{
+    margin:0;
+    color:var(--muted);
+    font-size:15px;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta{
+    text-align:center;
+    background:var(--green-light);
+    border-radius:var(--radius);
+    padding:48px 24px;
+  }
+
+  .cta h2{margin-bottom:10px;}
+
+  .cta p{color:var(--muted); margin-bottom:24px;}
+
+  .btn{
+    display:inline-block;
+    background:var(--green-dark);
+    color:var(--white);
+    text-decoration:none;
+    font-weight:700;
+    font-size:17px;
+    padding:14px 36px;
+    border-radius:999px;
+    box-shadow:var(--shadow);
+    transition:transform .15s ease, background .15s ease;
+  }
+
+  .btn:hover{
+    background:var(--green);
+    transform:translateY(-2px);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    text-align:center;
+    padding:32px 24px 48px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  footer a{font-weight:600;}
+
+  @media (max-width:600px){
+    .gallery{grid-template-columns:1fr 1fr;}
+    .role-card{grid-template-columns:1fr; text-align:center;}
+    .role-card img{margin:0 auto;}
+    .role-card .photo-pair{margin:0 auto;}
+    .highlight{flex-direction:column; text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="../index.html">&larr; Back to Coach Will's Soccer Lessons</a>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">Apex &amp; Holly Springs, NC</div>
+  <h1>Coach Will's Soccer Experience</h1>
+  <p class="tagline">A playing and coaching background built on the same fields your kids will train on&nbsp;&mdash; recreational, club, and travel soccer across the Triangle.</p>
+</header>
+
+<main>
+
+  <section class="playing">
+    <h2>Playing Career</h2>
+    <div class="gallery">
+      <img src="images/image3.png" alt="Will playing recreational soccer at age 4">
+      <img src="images/image1.png" alt="Will's middle school team on the sideline">
+      <img src="images/image7.png" alt="Will dribbling past a defender">
+    </div>
+    <ul class="check-list">
+      <li>Recreational soccer with the Town of Holly Springs since age 4</li>
+      <li>Selected for the state-wide league &ldquo;All Star&rdquo; team twice</li>
+      <li>Played for a competitive Middle School varsity team</li>
+      <li>Played with local clubs Carolina Velocity and Liberty Soccer Academy (now Carolina Football Club), trained by high-level coaches at each</li>
+    </ul>
+    <div class="highlight">
+      <img src="images/image2.png" alt="U11 team celebrating their championship win">
+      <p>Coached the championship-winning U11 team at the 2026 AC Sandhills Summer Starter Tournament</p>
+    </div>
+  </section>
+
+  <section class="coaching">
+    <h2>Coaching Experience</h2>
+    <div class="roles">
+
+      <div class="role-card">
+        <img src="images/IMG_6738.jpg" alt="Holly Springs team photo with Coach Will">
+        <div>
+          <h3 class="role">Assistant Coach &mdash; Town of Holly Springs</h3>
+          <p class="meta">Won championships on 2 separate occasions</p>
+          <ul>
+            <li>2 years assistant coaching U12 (9v9)</li>
+            <li>2 years assistant coaching U15 (11v11)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <img src="images/IMG_1142.jpg" alt="Coach Will directing a drill with cones">
+        <div>
+          <h3 class="role">Coach &mdash; Sofive Soccer Center, Raleigh, NC</h3>
+          <ul>
+            <li>Teach soccer lessons to kids from 18 months to 5 years old</li>
+            <li>Coach indoor soccer games for kids between the ages of 8&ndash;15</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <img src="images/IMG_1144.jpg" alt="Coach Will holding a ball with Wake FC players">
+        <div>
+          <h3 class="role">Head Coach &mdash; Wake FC U9 (7v7)</h3>
+          <p class="meta">Leading the club's youngest competitive age group</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <img src="images/IMG_1161.jpg" alt="Coach Will with Wake FC U11 players on the sideline">
+        <div>
+          <h3 class="role">Head Coach &mdash; Wake FC U11 (9v9)</h3>
+          <p class="meta">Won tournament championship, spring 2026</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to train with Coach Will?</h2>
+    <p>Fill out a short interest form and Coach Will will follow up to schedule your first session.</p>
+    <a class="btn" href="https://forms.gle/Pj3kkEU19RBzyEUT8">Click here to get started</a>
+  </section>
+
+</main>
+
+<footer>
+  Coach Will's Soccer Lessons &middot; Apex &amp; Holly Springs, NC<br>
+  <a href="tel:9843647110">984.364.7110</a> &middot; <a href="mailto:wjgrush@gmail.com">wjgrush@gmail.com</a>
+</footer>
+
+</body>
+</html>
