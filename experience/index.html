@@ -213,6 +213,20 @@
     border-radius:10px;
   }
 
+  .role-card .photo-pair{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    width:110px;
+  }
+
+  .role-card .photo-pair img{
+    width:110px;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+  }
+
   .role-card ul{
     margin:8px 0 0;
     padding-left:20px;
@@ -271,6 +285,7 @@
     .gallery{grid-template-columns:1fr 1fr;}
     .role-card{grid-template-columns:1fr; text-align:center;}
     .role-card img{margin:0 auto;}
+    .role-card .photo-pair{margin:0 auto;}
     .highlight{flex-direction:column; text-align:center;}
   }
 </style>
@@ -313,7 +328,7 @@
     <div class="roles">
 
       <div class="role-card">
-        <img src="images/IMG_1140.jpg" alt="Coach Will talking with players on the field">
+        <img src="images/IMG_6738.jpg" alt="Holly Springs team photo with Coach Will">
         <div>
           <h3 class="role">Assistant Coach &mdash; Town of Holly Springs</h3>
           <p class="meta">Won championships on 2 separate occasions</p>
